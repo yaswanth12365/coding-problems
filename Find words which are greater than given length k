@@ -1,0 +1,38 @@
+<script>
+// javascript program to find all string
+// which are greater than given length k
+
+	// function find string greater than
+	// length k
+	function string_k( s , k) {
+		// create the empty string
+		var w = "";
+
+		// iterate the loop till every space
+		for (i = 0; i < s.length; i++) {
+			if (s.charAt(i) != ' ')
+
+				// append this sub string in
+				// string w
+				w = w + s.charAt(i);
+			else {
+
+				// if length of current sub
+				// string w is greater than
+				// k then print
+				if (w.length > k)
+					document.write(w + " ");
+				w = "";
+			}
+		}
+	}
+
+	// Driver code
+	
+		var s = "geek for geeks";
+		var k = 3;
+		s = s + " ";
+		string_k(s, k);
+
+// This code is contributed by todaysgaurav
+</script>
